@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HOMIE — Reliable home help</title>
+<meta name="description" content="HOMIE — reliable home help from verified people at a clear price. Cleaning, deep cleaning, laundry and ironing in Tashkent.">
+<meta name="theme-color" content="#dcdcdc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fff'/%3E%3Cstop offset='.45' stop-color='%23777'/%3E%3Cstop offset='.55' stop-color='%23111'/%3E%3Cstop offset='1' stop-color='%23bbb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Cpath d='M18 14v36M46 14v36M18 32h28' stroke='url(%23g)' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="rag" id="rag" aria-hidden="true">
+  <svg viewBox="0 0 60 60">
+    <defs>
+      <linearGradient id="ragG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b4b4b4"/><stop offset=".55" stop-color="#858585"/><stop offset="1" stop-color="#5f5f5f"/></linearGradient>
+      <pattern id="ragT" width="3" height="3" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".55" fill="#000" opacity=".18"/></pattern>
+    </defs>
+    <path d="M4 4 C18 1 38 7 53 12 C58 26 54 42 50 55 C35 53 19 58 8 52 C2 38 7 21 4 4Z" fill="url(#ragG)"/>
+    <path d="M4 4 C18 1 38 7 53 12 C58 26 54 42 50 55 C35 53 19 58 8 52 C2 38 7 21 4 4Z" fill="url(#ragT)"/>
+    <path d="M4 4 C16 20 30 30 50 55" stroke="#4d4d4d" stroke-width="1.6" fill="none" opacity=".55"/>
+    <path d="M20 6 C26 18 28 34 22 54" stroke="#d6d6d6" stroke-width="1.4" fill="none" opacity=".6"/>
+    <path d="M53 12 C44 22 36 26 8 52" stroke="#555" stroke-width="1.1" fill="none" opacity=".35"/>
+  </svg>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo chrome-dark">HOMIE</a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#about" data-i18n="nav.services">Services</a>
+    <a href="#prices" data-i18n="nav.prices">Prices</a>
+    <a href="#safety" data-i18n="nav.safety">Safety</a>
+    <a href="#process" data-i18n="nav.process">How it works</a>
+    <a href="#team" data-i18n="nav.team">Team</a>
+    <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+    <a href="#join" data-i18n="nav.join">Become a helper</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en" class="on">EN</button><button data-lang="ru">RU</button>
+    </div>
+    <a href="#book" class="btn btn-dark btn-sm" data-i18n="nav.book">Book</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+  <div class="hero-sticky">
+    <video class="hero-video" id="heroVideo" src="assets/hero.mp4" poster="assets/hero-start.jpg" muted playsinline preload="auto"></video>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-intro" id="heroIntro">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Cleaning · Deep cleaning · Laundry · Ironing</p>
+      <h1 class="hero-mess" data-i18n="hero.mess">Mess<br>happens.</h1>
+      <p class="hero-scroll"><span data-i18n="hero.scroll">Scroll to clean</span> <i>↓</i></p>
+    </div>
+
+    <div class="hero-final" id="heroFinal">
+      <h2 class="hero-logo chrome-dark" aria-label="HOMIE">HOMIE</h2>
+      <p class="hero-tag" data-i18n="hero.tag">Reliable home help from verified people at a clear price.</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn btn-dark" data-i18n="hero.book">Book a cleaning</a>
+        <a href="#prices" class="btn btn-ghost" data-i18n="hero.prices">See prices</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ABOUT / SERVICES -->
+<section class="about" id="about">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="about.eyebrow">01 — What is HOMIE</p>
+    <h2 class="big reveal" data-i18n="about.title">We don’t just sell cleaning.<br><span class="chrome-dark">We sell certainty.</span></h2>
+    <p class="lead reveal" data-i18n="about.lead">HOMIE connects you with verified independent helpers. Pick a service, choose a time, see the full price up front — and get your home done to one standard checklist, every time.</p>
+
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="num chrome-dark">01</span>
+        <h3 data-i18n="p1.t">Verified helpers</h3>
+        <p data-i18n="p1.d">Identity check, experience check and a reliability score before anyone enters your home.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="num chrome-dark">02</span>
+        <h3 data-i18n="p2.t">Consistent quality</h3>
+        <p data-i18n="p2.d">One standard checklist, quality control and ratings after every order.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="num chrome-dark">03</span>
+        <h3 data-i18n="p3.t">Transparent pricing</h3>
+        <p data-i18n="p3.d">You see the final price before booking. No surprise extras, ever.</p>
+      </article>
+    </div>
+
+    <div class="services">
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48"><path d="M8 40h32M14 40V20l10-8 10 8v20M20 40v-9h8v9"/></svg>
+        <h4 data-i18n="s1.t">Home Cleaning</h4><p data-i18n="s1.d">Regular cleaning of apartments and houses.</p>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48"><path d="M24 6l3 9 9 3-9 3-3 9-3-9-9-3 9-3zM36 30l1.5 4.5L42 36l-4.5 1.5L36 42l-1.5-4.5L30 36l4.5-1.5z"/></svg>
+        <h4 data-i18n="s2.t">Deep Cleaning</h4><p data-i18n="s2.d">Top-to-bottom general cleaning, every corner.</p>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="36" rx="3"/><circle cx="24" cy="26" r="9"/><path d="M15 12h4"/></svg>
+        <h4 data-i18n="s3.t">Laundry</h4><p data-i18n="s3.d">Washing and garment care with pickup.</p>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48"><path d="M6 34h30c4 0 6-3 6-6v-2H18c-7 0-12 4-12 8zM18 26c0-6 3-10 10-10h8"/></svg>
+        <h4 data-i18n="s4.t">Ironing</h4><p data-i18n="s4.d">Crisp shirts, dresses and bed linen.</p>
+      </article>
+      <article class="svc reveal">
+        <svg viewBox="0 0 48 48"><path d="M24 10v28M10 24h28"/><circle cx="24" cy="24" r="17"/></svg>
+        <h4 data-i18n="s5.t">More home services</h4><p data-i18n="s5.d">Windows, fridge, oven, balcony and more.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track chrome-dark" data-i18n="marquee">TRUST · RELIABILITY · TRANSPARENCY · CONVENIENCE · QUALITY · RESPONSIBILITY · TRUST · RELIABILITY · TRANSPARENCY · CONVENIENCE · QUALITY · RESPONSIBILITY ·&nbsp;</div>
+  </div>
+</section>
+
+<!-- 3. PRICES with MOP SCENE -->
+<section class="prices" id="prices">
+  <div class="scene" aria-hidden="true">
+    <div class="scene-sticky" id="scene">
+      <svg class="room room-dirty" id="roomDirty" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"></svg>
+      <svg class="room room-clean" id="roomClean" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"></svg>
+      <div class="scene-fade"></div>
+      <div class="mop" id="mop">
+        <svg viewBox="0 0 260 900" id="mopSvg"></svg>
+      </div>
+      <div class="mop-hint" id="mopHint"><span data-i18n="mop.hint">Drag the mop</span> →</div>
+    </div>
+  </div>
+
+  <div class="prices-content wrap">
+    <p class="eyebrow" data-i18n="prices.eyebrow">02 — Clear price</p>
+    <h2 class="big" data-i18n="prices.title">Two modes.<br>One clear price.</h2>
+
+    <div class="modes">
+      <article class="glass mode">
+        <div class="mode-ico"><svg viewBox="0 0 48 48"><path d="M8 22L24 8l16 14v18H8z"/><circle cx="24" cy="28" r="4"/><path d="M18 40c0-4 3-6 6-6s6 2 6 6"/></svg></div>
+        <h3>I’m Home</h3>
+        <p data-i18n="mode.home">You are at home during the cleaning. Meet your helper, point out priorities, relax.</p>
+      </article>
+      <article class="glass mode">
+        <div class="mode-ico"><svg viewBox="0 0 48 48"><path d="M8 22L24 8l16 14v18H8z"/><rect x="19" y="25" width="10" height="9" rx="1"/><path d="M21 25v-3a3 3 0 016 0v3"/></svg></div>
+        <h3>I’m Away</h3>
+        <p data-i18n="mode.away">You are out. The helper gets access to your home by agreed rules — key handover or door code, 360° camera on, photo report at the end.</p>
+      </article>
+    </div>
+
+    <div class="price-grid">
+      <article class="glass price">
+        <h4 data-i18n="s1.t">Home Cleaning</h4>
+        <p class="amount"><small data-i18n="from">from</small> 300 000 <small data-i18n="cur">UZS</small></p>
+        <p data-i18n="pr1">Up to 40 m². +6 000 per extra m². 2–3 hours.</p>
+      </article>
+      <article class="glass price">
+        <h4 data-i18n="s2.t">Deep Cleaning</h4>
+        <p class="amount">13 000 <small data-i18n="perm2">UZS / m²</small></p>
+        <p data-i18n="pr2">Minimum 650 000. Includes inside cabinets, tiles, baseboards.</p>
+      </article>
+      <article class="glass price">
+        <h4 data-i18n="s3.t">Laundry</h4>
+        <p class="amount">25 000 <small data-i18n="perkg">UZS / kg</small></p>
+        <p data-i18n="pr3">Minimum 5 kg. Pickup and delivery included.</p>
+      </article>
+      <article class="glass price">
+        <h4 data-i18n="s4.t">Ironing</h4>
+        <p class="amount">10 000 <small data-i18n="peritem">UZS / item</small></p>
+        <p data-i18n="pr4">Minimum 10 items. Shirts, dresses, linen.</p>
+      </article>
+    </div>
+
+    <div class="glass calc" id="calc">
+      <div class="calc-left">
+        <h3 data-i18n="calc.title">Price calculator</h3>
+        <label class="field"><span data-i18n="calc.service">Service</span>
+          <select id="cService">
+            <option value="home" data-i18n="s1.t">Home Cleaning</option>
+            <option value="deep" data-i18n="s2.t">Deep Cleaning</option>
+            <option value="laundry" data-i18n="s3.t">Laundry</option>
+            <option value="ironing" data-i18n="s4.t">Ironing</option>
+          </select>
+        </label>
+        <label class="field"><span><b id="cQtyLabel">Area</b>: <b id="cQtyVal">50</b></span>
+          <input type="range" id="cQty" min="20" max="200" step="5" value="50">
+        </label>
+        <div class="field"><span data-i18n="calc.mode">Mode</span>
+          <div class="seg" id="cMode">
+            <button type="button" class="on" data-v="home">I’m Home</button>
+            <button type="button" data-v="away">I’m Away <small>+50 000</small></button>
+          </div>
+        </div>
+        <div class="field" id="cExtrasWrap"><span data-i18n="calc.extras">Extras</span>
+          <div class="chips" id="cExtras">
+            <label><input type="checkbox" value="80000"><span data-i18n="x.windows">Windows</span> <small>+80 000</small></label>
+            <label><input type="checkbox" value="60000"><span data-i18n="x.fridge">Fridge inside</span> <small>+60 000</small></label>
+            <label><input type="checkbox" value="60000"><span data-i18n="x.oven">Oven</span> <small>+60 000</small></label>
+            <label><input type="checkbox" value="50000"><span data-i18n="x.balcony">Balcony</span> <small>+50 000</small></label>
+          </div>
+        </div>
+      </div>
+      <div class="calc-right">
+        <p class="eyebrow" data-i18n="calc.total">Final price</p>
+        <p class="total"><span id="cTotal">300 000</span> <small data-i18n="cur">UZS</small></p>
+        <p class="calc-note" data-i18n="calc.note">This is the price you pay. No hidden extras.</p>
+        <button class="btn btn-dark" id="cBook" data-i18n="calc.book">Book at this price</button>
+        <button class="btn btn-ghost btn-sm" id="mess" data-i18n="calc.mess">Make a mess again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SAFETY -->
+<section class="safety dark" id="safety">
+  <div class="wrap safety-grid">
+    <div class="cam-visual reveal" aria-hidden="true">
+      <div class="cam-ring r1"></div><div class="cam-ring r2"></div><div class="cam-ring r3"></div>
+      <div class="cam-core">
+        <span class="chrome-light">360°</span>
+        <i class="rec"><b></b>REC</i>
+      </div>
+      <div class="cam-sweep"></div>
+    </div>
+    <div>
+      <p class="eyebrow reveal" data-i18n="safe.eyebrow">03 — Safety</p>
+      <h2 class="big reveal" data-i18n="safe.title">A 360° camera on <span class="chrome-light">every helper.</span></h2>
+      <p class="lead reveal" data-i18n="safe.lead">During every cleaning the helper wears a 360° body camera. It protects your belongings from loss and theft — and protects the helper from false claims.</p>
+      <ul class="safe-list">
+        <li class="reveal"><b>01</b><div><h4 data-i18n="sf1.t">Recording from start to finish</h4><p data-i18n="sf1.d">The camera turns on at your door and turns off when the helper leaves.</p></div></li>
+        <li class="reveal"><b>02</b><div><h4 data-i18n="sf2.t">Private and encrypted</h4><p data-i18n="sf2.d">Footage is stored encrypted for 30 days and opened only if there is a claim — by you or by us.</p></div></li>
+        <li class="reveal"><b>03</b><div><h4 data-i18n="sf3.t">Loss and damage cover</h4><p data-i18n="sf3.d">If something is lost or broken during the order, HOMIE investigates and compensates.</p></div></li>
+        <li class="reveal"><b>04</b><div><h4 data-i18n="sf4.t">Verified identity</h4><p data-i18n="sf4.d">Every helper passes an ID check, experience check and personal interview.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. PROCESS + CHECKLIST -->
+<section class="process" id="process">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="proc.eyebrow">04 — How it works</p>
+    <h2 class="big reveal" data-i18n="proc.title">Six steps to a clean home.</h2>
+    <div class="process-grid">
+      <ol class="steps">
+        <li class="reveal"><span class="chrome-dark">01</span><div><h4 data-i18n="st1.t">Choose a service</h4><p data-i18n="st1.d">Cleaning, deep cleaning, laundry or ironing.</p></div></li>
+        <li class="reveal"><span class="chrome-dark">02</span><div><h4 data-i18n="st2.t">Pick date and time</h4><p data-i18n="st2.d">Fixed slots that we can actually guarantee.</p></div></li>
+        <li class="reveal"><span class="chrome-dark">03</span><div><h4 data-i18n="st3.t">See the final price</h4><p data-i18n="st3.d">Confirmed before you book.</p></div></li>
+        <li class="reveal"><span class="chrome-dark">04</span><div><h4 data-i18n="st4.t">We assign a verified helper</h4><p data-i18n="st4.d">Matched by HOMIE, not by luck.</p></div></li>
+        <li class="reveal"><span class="chrome-dark">05</span><div><h4 data-i18n="st5.t">Cleaning by checklist</h4><p data-i18n="st5.d">Same standard on every order.</p></div></li>
+        <li class="reveal"><span class="chrome-dark">06</span><div><h4 data-i18n="st6.t">Pay and leave feedback</h4><p data-i18n="st6.d">Your rating keeps quality high.</p></div></li>
+      </ol>
+      <div class="checklist reveal" id="checklist">
+        <div class="cl-head"><span class="chrome-dark">HOMIE</span><small data-i18n="cl.title">Standard checklist</small></div>
+        <ul>
+          <li data-i18n="cl1">Dust all surfaces</li>
+          <li data-i18n="cl2">Vacuum and mop floors</li>
+          <li data-i18n="cl3">Kitchen counters and sink</li>
+          <li data-i18n="cl4">Bathroom and toilet disinfected</li>
+          <li data-i18n="cl5">Mirrors and glass polished</li>
+          <li data-i18n="cl6">Beds made, trash out</li>
+          <li data-i18n="cl7">Photo report sent</li>
+        </ul>
+        <p class="cl-foot" data-i18n="cl.foot">Quality checked · Rated by you</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. TEAM -->
+<section class="team dark" id="team">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="team.eyebrow">05 — Team</p>
+    <h2 class="big reveal" data-i18n="team.title">The people behind <span class="chrome-light">HOMIE.</span></h2>
+    <div class="team-grid" id="teamGrid"></div>
+  </div>
+</section>
+
+<!-- 7. MISSION -->
+<section class="mission" id="mission">
+  <div class="wrap mission-grid">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="mis.m">Mission</p>
+      <p class="quote" data-i18n="mis.mt">To make everyday home life easier by providing reliable, convenient and affordable household services.</p>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="mis.v">Vision</p>
+      <p class="quote" data-i18n="mis.vt">To become a trusted platform for household services, making professional home help accessible to everyone.</p>
+    </div>
+  </div>
+  <div class="drops" aria-hidden="true">
+    <svg viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 22 -9"/></filter>
+        <linearGradient id="merc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#9c9c9c"/><stop offset=".55" stop-color="#2a2a2a"/><stop offset=".75" stop-color="#cfcfcf"/><stop offset="1" stop-color="#6d6d6d"/></linearGradient>
+      </defs>
+      <g filter="url(#goo)" fill="url(#merc)">
+        <ellipse class="d d1" cx="300" cy="150" rx="140" ry="26"/>
+        <ellipse class="d d2" cx="520" cy="150" rx="60" ry="18"/>
+        <ellipse class="d d3" cx="760" cy="155" rx="170" ry="24"/>
+        <ellipse class="d d4" cx="960" cy="150" rx="50" ry="15"/>
+        <circle class="d d5" cx="620" cy="150" r="22"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- 8. REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="rev.eyebrow">06 — Reviews</p>
+    <h2 class="big reveal" data-i18n="rev.title">Clean homes. Honest words.</h2>
+    <div class="rev-grid" id="revGrid">
+      <article class="review reveal"><div class="stars">★★★★★</div><p data-i18n="r1">Booked in two minutes, the price was exactly what the site said. The apartment looked like a hotel room.</p><span>Madina · <i data-i18n="pilot">pilot client</i></span></article>
+      <article class="review reveal"><div class="stars">★★★★★</div><p data-i18n="r2">I used I’m Away mode — got a photo report while I was at work. Very calm feeling.</p><span>Sardor · <i data-i18n="pilot">pilot client</i></span></article>
+      <article class="review reveal"><div class="stars">★★★★☆</div><p data-i18n="r3">The checklist really works: every corner done. Would love more evening slots.</p><span>Kamila · <i data-i18n="pilot">pilot client</i></span></article>
+    </div>
+    <button class="btn btn-dark" id="revOpen" data-i18n="rev.leave">Leave a review</button>
+    <form class="glass rev-form" id="revForm" hidden>
+      <div class="rate" id="rate" role="radiogroup" aria-label="Rating">
+        <button type="button" data-v="1">★</button><button type="button" data-v="2">★</button><button type="button" data-v="3">★</button><button type="button" data-v="4">★</button><button type="button" data-v="5">★</button>
+      </div>
+      <input class="input" id="revName" maxlength="40" data-i18n-ph="ph.name" placeholder="Your name">
+      <textarea class="input" id="revText" rows="3" maxlength="600" required data-i18n-ph="ph.review" placeholder="How was your cleaning?"></textarea>
+      <div class="row-end">
+        <button type="button" class="btn btn-ghost btn-sm" id="revCancel" data-i18n="cancel">Cancel</button>
+        <button type="submit" class="btn btn-dark btn-sm" data-i18n="rev.send">Send via Telegram</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- 9. BOOKING -->
+<section class="book dark" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <p class="eyebrow reveal" data-i18n="book.eyebrow">07 — Booking</p>
+      <h2 class="big reveal" data-i18n="book.title">Book your <span class="chrome-light">clean home.</span></h2>
+      <p class="lead reveal" data-i18n="book.lead">Fill in the form — we confirm your helper within 15 minutes. Prefer to chat? Write to us in Telegram.</p>
+      <a class="tg reveal" href="https://t.me/nho1y" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M21.5 4.2L2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.2zM9.6 14.6l8.6-7.7c.4-.3-.1-.5-.6-.2l-10.6 6.7"/></svg>
+        <span>@nho1y</span>
+      </a>
+    </div>
+    <form class="form reveal" id="bookForm" novalidate>
+      <label class="field"><span data-i18n="calc.service">Service</span>
+        <select id="bService" required>
+          <option value="home" data-i18n="s1.t">Home Cleaning</option>
+          <option value="deep" data-i18n="s2.t">Deep Cleaning</option>
+          <option value="laundry" data-i18n="s3.t">Laundry</option>
+          <option value="ironing" data-i18n="s4.t">Ironing</option>
+        </select>
+      </label>
+      <div class="two">
+        <label class="field"><span data-i18n="f.date">Date</span><input type="date" id="bDate" required></label>
+        <label class="field"><span data-i18n="f.time">Time</span>
+          <select id="bTime" required>
+            <option>09:00</option><option>12:00</option><option>15:00</option><option>18:00</option>
+          </select>
+        </label>
+      </div>
+      <label class="field"><span data-i18n="f.address">Address</span><input id="bAddr" required data-i18n-ph="ph.addr" placeholder="District, street, building, apartment"></label>
+      <div class="two">
+        <label class="field"><span data-i18n="f.name">Name</span><input id="bName" required data-i18n-ph="ph.name" placeholder="Your name"></label>
+        <label class="field"><span data-i18n="f.phone">Phone</span><input id="bPhone" type="tel" required placeholder="+998 __ ___ __ __"></label>
+      </div>
+      <div class="field"><span data-i18n="calc.mode">Mode</span>
+        <div class="seg" id="bMode"><button type="button" class="on" data-v="home">I’m Home</button><button type="button" data-v="away">I’m Away</button></div>
+      </div>
+      <p class="book-price" id="bPrice"></p>
+      <label class="bonus-row" id="bBonusRow" hidden><input type="checkbox" id="bBonus"><span id="bBonusText"></span></label>
+      <button class="btn btn-light" type="submit" data-i18n="book.send">Send request</button>
+    </form>
+  </div>
+</section>
+
+<!-- 10. JOIN -->
+<section class="join" id="join">
+  <div class="wrap book-grid">
+    <div>
+      <p class="eyebrow reveal" data-i18n="join.eyebrow">08 — Careers</p>
+      <h2 class="big reveal" data-i18n="join.title">Become a <span class="chrome-dark">HOMIE helper.</span></h2>
+      <p class="lead reveal" data-i18n="join.lead">Flexible schedule, fair pay for every order, training to the HOMIE standard. We verify everyone — that is why clients trust us.</p>
+      <ul class="perks reveal">
+        <li data-i18n="jp1">Paid for every completed order</li>
+        <li data-i18n="jp2">Choose your own slots</li>
+        <li data-i18n="jp3">Free training and supplies</li>
+      </ul>
+    </div>
+    <form class="form form-light reveal" id="joinForm" novalidate>
+      <div class="two">
+        <label class="field"><span data-i18n="f.name">Name</span><input id="jName" required data-i18n-ph="ph.name" placeholder="Your name"></label>
+        <label class="field"><span data-i18n="f.phone">Phone</span><input id="jPhone" type="tel" required placeholder="+998 __ ___ __ __"></label>
+      </div>
+      <div class="two">
+        <label class="field"><span data-i18n="f.age">Age</span><input id="jAge" type="number" min="18" max="70" required></label>
+        <label class="field"><span data-i18n="f.district">District</span><input id="jDistrict" required data-i18n-ph="ph.district" placeholder="e.g. Yunusabad"></label>
+      </div>
+      <label class="field"><span data-i18n="f.exp">Experience</span>
+        <select id="jExp">
+          <option data-i18n="e0">No experience</option>
+          <option data-i18n="e1">Less than 1 year</option>
+          <option data-i18n="e2">1–3 years</option>
+          <option data-i18n="e3">More than 3 years</option>
+        </select>
+      </label>
+      <div class="field"><span data-i18n="f.services">What can you do?</span>
+        <div class="chips">
+          <label><input type="checkbox" checked><span data-i18n="s1.t">Home Cleaning</span></label>
+          <label><input type="checkbox"><span data-i18n="s2.t">Deep Cleaning</span></label>
+          <label><input type="checkbox"><span data-i18n="s3.t">Laundry</span></label>
+          <label><input type="checkbox"><span data-i18n="s4.t">Ironing</span></label>
+        </div>
+      </div>
+      <label class="field"><span data-i18n="f.about">About you</span><textarea id="jAbout" rows="3" data-i18n-ph="ph.about" placeholder="A few words about yourself"></textarea></label>
+      <button class="btn btn-dark" type="submit" data-i18n="join.send">Apply</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot dark">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-logo chrome-light">HOMIE</p>
+      <p data-i18n="hero.tag">Reliable home help from verified people at a clear price.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#prices" data-i18n="nav.prices">Prices</a>
+      <a href="#safety" data-i18n="nav.safety">Safety</a>
+      <a href="#book" data-i18n="nav.book">Book</a>
+      <a href="#join" data-i18n="nav.join">Become a helper</a>
+      <a href="https://t.me/nho1y" target="_blank" rel="noopener">Telegram @nho1y</a>
+    </div>
+  </div>
+  <p class="foot-copy wrap" data-i18n="foot">© 2026 HOMIE · Tashkent · Entrepreneurship project</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-card">
+    <div class="modal-check"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
+    <h3 id="modalTitle">Request accepted</h3>
+    <p id="modalText"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="modalClose">OK</button>
+      <button class="btn btn-dark" id="modalPlay" hidden></button>
+    </div>
+  </div>
+</div>
+
+<!-- GAME -->
+<div class="game" id="game" hidden>
+  <div class="game-top">
+    <span class="g-title" id="gTitle">HOMIE</span>
+    <span class="g-stat"><b id="gTime">30.0</b><small id="gTimeLbl">sec</small></span>
+    <span class="g-stat"><b id="gScore">0</b><small id="gScoreLbl">score</small></span>
+    <span class="g-stat"><b id="gBal">0</b><small id="gBalLbl">bonus</small></span>
+    <button class="g-close" id="gClose" aria-label="Close">×</button>
+  </div>
+  <div class="game-stage" id="gStage">
+    <canvas id="gCanvas"></canvas>
+    <div class="g-toast" id="gToast"></div>
+    <div class="g-panel" id="gPanel"></div>
+  </div>
+  <p class="g-hint" id="gHint"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
